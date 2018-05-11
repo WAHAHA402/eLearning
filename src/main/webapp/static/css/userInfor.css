@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	font-family: 'microsoft yahei';
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	border: 1.5px solid #D43F3A;
+	height: 20px;
+	width: 150px;
+}
+
+#btn01 {
+	background-color: #DC143C;
+	border-radius: 3px;
+	width: 70px;
+	height: 40px;
+	border: none;
+	color: white;
+	font-size: 15px;
+	letter-spacing: 5px;
+}
+
+#btn02 {
+	background-color: #337AB7;
+	border-radius: 3px;
+	width: 70px;
+	height: 40px;
+	border: none;
+	color: white;
+	font-size: 15px;
+	letter-spacing: 5px;
+}
+
+.select_span {
+	position: absolute;
+	border: 1pt solid #D43F3A;
+	overflow: hidden;
+	width: 150px;
+	height: 20px;
+}
+
+.option_defined {
+	color: gray;
+}
+
+.select {
+	width: 150px;
+	height: 20px;
+
+}

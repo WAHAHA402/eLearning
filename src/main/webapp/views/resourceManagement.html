@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>E-Learning在线学习</title>
+		<link rel="Shortcut Icon" href="/imgSource/logo.ico" type="image/x-icon">
+		<link rel="stylesheet" href="http://localhost:8080/eLearning/static/css/index.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css">
+		<link rel="stylesheet" href="http://localhost:8080/eLearning/static/css/resourceManagement.css" />
+		<script type="text/javascript" src="http://localhost:8080/eLearning/static/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="http://localhost:8080/eLearning/static/js/resourceManagement.js"></script>
+		<style type="text/css">
+			.cat_wrap .cat_title {
+				background: url(/imgSource/head.png) no-repeat;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div>
+
+			<div style="position: relative;">
+				<img src="/imgSource/logo.jpg" style="width: 180px;height: 100px;display: inline-block;" />
+				<img src="/imgSource/slogan.jpg" style="display: inline-block;width: 70%;" />
+				<div>
+					<a href="userInfor.html" style="font-size: 16px;color: #DC143C;text-decoration: none;position: absolute;right: 5%;top: 30%;">欢迎您,HCC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人中心</a>
+					<img src="/imgSource/user.png" style="width: 35px;position: absolute;right: 2%;top: 22%;" />
+				</div>
+				<div id="search-helper" style="display: none;position: absolute;right: 82px;top: 103px;z-index: 10000;border: 0.5px solid #CD0000;">
+					<p style="color: #CD0000;">&nbsp;&nbsp;------大家都在搜------</p>
+					<p style="color: gray;">&nbsp;人工智能</p>
+					<p style="color: gray;">&nbsp;前端开发</p>
+					<p style="color: gray;">&nbsp;Java开发</p>
+					<p style="color: gray;">&nbsp;大数据</p>
+					<p style="color: gray;">&nbsp;金融管理</p>
+					<p style="color: gray;">&nbsp;投资理财</p>
+					<p style="color: gray;">&nbsp;微信小程序</p>
+					<p style="color: gray;">&nbsp;UI设计</p>
+					<p style="color: gray;">&nbsp;云计算</p><br />
+					<a style="color: #CD0000;">&nbsp;更多热搜>>></a>
+				</div>
+				<div style="position: absolute;right: 30px;top: 70px;">
+					<span style="float: left;"><input type="text" id="txtSearch" placeholder="搜索你感兴趣的内容吧" style="border: 2px solid #CD0000;width: 180px;height: 30px;"/></span>
+					<span style="float: left;">
+						<button type="submit" style="border: 2px solid #CD0000;background-color: #CD0000; height: 34px;width: 50px;">
+							<i class="icon ion-log-in" style="color: white;font-size: 25px;"></i>
+						</button></span>
+				</div>
+			</div>
+
+			<div id="nav">
+				<ul class="w">
+					<li style="margin-left: 1%;padding-right: 20px;">
+						<a href="loginSuccessfully.html">首&nbsp;&nbsp;页</a>
+					</li>
+					<li>
+						<a href="#">&nbsp;&nbsp;知识库</a>
+					</li>
+					<li>
+						<a href="online.html">在线直播</a>
+					</li>
+					<li>
+						<a href="videoStudy.html">视频学习</a>
+					</li>
+					<li>
+						<a href="interactionCenter.html">互动中心</a>
+					</li>
+					<li class="active">
+						<a href="resourceManagement.html">资源管理</a>
+					</li>
+					<li>
+						<a href="profession.html">职业路径</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div style="width: 100%;height: 1100px;background-color: floralwhite;position: relative;">
+				<div style="position: absolute;left: 15%;top: 3%;border: 1px solid lightgray;width: 260px;height: 450px;background-color: white;border-radius: 3px;">
+					<p style="position: absolute;left: 5%;top: 3%;color: darkgray;">我的学习</p>
+					<div style="position: absolute;top: 12%;width: 260px;height: 45px;background-color: whitesmoke;">
+						<a style="position: absolute;left: 12%;top: 25%;color: #CD0000;">我的课程</a>
+					</div>
+					<div style="position: absolute;top: 24%;width: 260px;height: 45px;">
+						<a style="position: absolute;left: 12%;top: 25%;color: dimgray;">我的直播</a>
+					</div>
+					<div style="position: absolute;top: 36%;width: 260px;height: 45px;">
+						<a style="position: absolute;left: 12%;top: 25%;color: dimgray;">我的问答</a>
+					</div>
+					<div style="position: absolute;top: 48%;width: 260px;height: 45px;">
+						<a style="position: absolute;left: 12%;top: 25%;color: dimgray;">我的笔记</a>
+					</div>
+					<div style="position: absolute;top: 60%;width: 260px;height: 45px;">
+						<a style="position: absolute;left: 12%;top: 25%;color: dimgray;">我的作业</a>
+					</div>
+					<div style="position: absolute;top: 72%;width: 260px;height: 45px;">
+						<a style="position: absolute;left: 12%;top: 25%;color: dimgray;">我的考试</a>
+					</div>
+					<div style="position: absolute;top: 84%;width: 260px;height: 45px;">
+						<a style="position: absolute;left: 12%;top: 25%;color: dimgray;">我的小组</a>
+					</div>
+				</div>
+				 
+				 <div style="position: absolute;left: 33%;top: 3%;border: 1px solid lightgray;width: 800px;height: 1000px;background-color: white;border-radius: 3px;">
+					<p style="position: absolute;left: 2%;top: 1%;color: dimgray;font-size: 17px;">我的课程</p>
+					<div style="position: absolute;top: 4%;background-color: lightgray;width: 800px;height: 1px;"></div>
+					<ul class="tabs" style="position: absolute;left: 2%;top: 6%;font-size: 15px;color: #333333;">
+					<li class="current" style="float: left;">学习中</li>
+					<li class="default" style="float: left;margin-left: 20px;">已学完</li>
+					<li class="default" style="float: left;margin-left: 20px;">收藏</li>
+					</ul>
+					<div style="position: absolute;left: 2%;top: 12%;width: 768px;height: 180px;box-shadow: 3px 3px 5px lightgray;">
+						<img src="/imgSource/resource01.jpg" style="position: absolute;left: 5%;top: 18%; width: 200px;height: 120px;"/>
+						<a style="position: absolute;left: 35%;top: 20%;font-size: 20px;">BAT前端面试揭秘</a>
+							<span style="position: absolute;left: 35%;top: 40%;color: gray;">学习进度</span>
+							<div style="background-color: lightgray;width: 200px;height: 4px;position: absolute;left: 48%;top: 45%;"></div>
+							<span style="position: absolute;left: 76%;top: 40%;color: gray;">0%</span>
+							<button style="position: absolute;bottom: 10%;right: 4%;width: 100px;height: 40px;background-color: #D43F3A;border: none;border-radius: 4px;color: white;font-size: 16px;">继续学习</button>
+					</div>
+					<div style="position: absolute;left: 2%;top: 34%;width: 768px;height: 180px;box-shadow: 3px 3px 5px lightgray;">
+						<img src="/imgSource/resource02.jpg" style="position: absolute;left: 5%;top: 18%; width: 200px;height: 120px;"/>
+						<a style="position: absolute;left: 35%;top: 20%;font-size: 20px;">实战：360度全景图片</a>
+							<span style="position: absolute;left: 35%;top: 40%;color: gray;">学习进度</span>
+							<div style="background-color: lightgray;width: 200px;height: 4px;position: absolute;left: 48%;top: 45%;"></div>
+							<span style="position: absolute;left: 76%;top: 40%;color: gray;">0%</span>
+							<button style="position: absolute;bottom: 10%;right: 4%;width: 100px;height: 40px;background-color: #D43F3A;border: none;border-radius: 4px;color: white;font-size: 16px;">继续学习</button>
+					</div>
+					<div style="position: absolute;left: 2%;top: 56%;width: 768px;height: 180px;box-shadow: 3px 3px 5px lightgray;">
+						<img src="/imgSource/resource03.jpg" style="position: absolute;left: 5%;top: 18%; width: 200px;height: 120px;"/>
+						<a style="position: absolute;left: 35%;top: 20%;font-size: 20px;">CSS3特效实战</a>
+							<span style="position: absolute;left: 35%;top: 40%;color: gray;">学习进度</span>
+							<div style="background-color: lightgray;width: 200px;height: 4px;position: absolute;left: 48%;top: 45%;"></div>
+							<span style="position: absolute;left: 76%;top: 40%;color: gray;">0%</span>
+							<button style="position: absolute;bottom: 10%;right: 4%;width: 100px;height: 40px;background-color: #D43F3A;border: none;border-radius: 4px;color: white;font-size: 16px;">继续学习</button>
+					</div>
+					<div style="position: absolute;left: 2%;top: 78%;width: 768px;height: 180px;box-shadow: 3px 3px 5px lightgray;">
+						<img src="/imgSource/resource04.jpg" style="position: absolute;left: 5%;top: 18%; width: 200px;height: 120px;"/>
+						<a style="position: absolute;left: 35%;top: 20%;font-size: 20px;">JavaScript DOM</a>
+							<span style="position: absolute;left: 35%;top: 40%;color: gray;">学习进度</span>
+							<div style="background-color: lightgray;width: 200px;height: 4px;position: absolute;left: 48%;top: 45%;"></div>
+							<span style="position: absolute;left: 76%;top: 40%;color: gray;">0%</span>
+							<button style="position: absolute;bottom: 10%;right: 4%;width: 100px;height: 40px;background-color: #D43F3A;border: none;border-radius: 4px;color: white;font-size: 16px;">继续学习</button>
+					</div>
+				</div>
+			</div>
+			
+			<div style="position: relative;height: 100px;width: auto;background-color: whitesmoke;">
+				<p style="position: absolute;left: 15%;top: 40%; color: gray;float: left;">
+					<span>企业合作</span>
+					<span style="margin-left: 20px;">人才招聘</span>
+					<span style="margin-left: 20px;">联系我们</span>
+					<span style="margin-left: 20px;">常见问题</span>
+					<span style="margin-left: 20px;">意见反馈</span>
+					<span style="margin-left: 20px;">友情链接</span>
+					<span style="margin-left: 20px;">给个好评</span>
+				</p>
+				<div style="position: absolute;right: 15%;top: 20%;float: left;">
+					<img src="/imgSource/wx.png" style="width: 40px;margin-right: 30px;" />
+					<img src="/imgSource/wb.png" style="width: 40px;" />
+				</div>
+				<div style="position: absolute;right: 15%;top: 58%;float: left;">
+					<span style="font-size: 10px;color: gray;margin-right: 25px;">官方公众号</span>
+					<span style="font-size: 10px;color: gray;">官方微博</span>
+				</div>
+			</div>
+			
+			
+		</div>
+	</body>
+
+</html>

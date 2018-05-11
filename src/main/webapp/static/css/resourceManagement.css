@@ -1,0 +1,13 @@
+.tabs li{
+	cursor: pointer;
+}
+
+.current {
+	border-bottom: 2px solid #FF3030;
+	padding-bottom: 8px;
+	color: #FF3030;
+}
+
+div a:hover{
+	cursor: pointer;
+}

@@ -1,0 +1,43 @@
+.tabs li{
+	cursor: pointer;
+}
+
+.current {
+	border-bottom: 2px solid #FF3030;
+	padding-bottom: 8px;
+	color: #FF3030;
+}
+
+ul.pagination {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	left: 20%;
+	top: 94%;
+	font-size: 20px;
+}
+
+ul.pagination li {
+	display: inline;
+}
+
+ul.pagination li a {
+	color: #DC143C;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+ul.pagination li a.active {
+	background-color: #FF3030;
+	color: white;
+	border-radius: 5px;
+}
+
+ul.pagination li a:hover:not(.active) {
+	background-color: #CD0000;
+	color: white;
+}
+

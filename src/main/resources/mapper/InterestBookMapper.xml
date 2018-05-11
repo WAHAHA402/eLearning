@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wahaha.dao.InterestBookMapper">
+  <resultMap id="BaseResultMap" type="com.wahaha.bean.InterestBook">
+    <result column="userId" jdbcType="VARCHAR" property="userid" />
+    <result column="book1" jdbcType="VARCHAR" property="book1" />
+    <result column="book2" jdbcType="VARCHAR" property="book2" />
+    <result column="book3" jdbcType="VARCHAR" property="book3" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    userId, book1, book2, book3
+  </sql>
+  <select id="selectByExample" parameterType="com.wahaha.bean.InterestBookExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from interestBook
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.wahaha.bean.InterestBookExample">
+    delete from interestBook
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.wahaha.bean.InterestBook">
+    insert into interestBook (userId, book1, book2, 
+      book3)
+    values (#{userid,jdbcType=VARCHAR}, #{book1,jdbcType=VARCHAR}, #{book2,jdbcType=VARCHAR}, 
+      #{book3,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wahaha.bean.InterestBook">
+    insert into interestBook
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="book1 != null">
+        book1,
+      </if>
+      <if test="book2 != null">
+        book2,
+      </if>
+      <if test="book3 != null">
+        book3,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="book1 != null">
+        #{book1,jdbcType=VARCHAR},
+      </if>
+      <if test="book2 != null">
+        #{book2,jdbcType=VARCHAR},
+      </if>
+      <if test="book3 != null">
+        #{book3,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.wahaha.bean.InterestBookExample" resultType="java.lang.Long">
+    select count(*) from interestBook
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update interestBook
+    <set>
+      <if test="record.userid != null">
+        userId = #{record.userid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.book1 != null">
+        book1 = #{record.book1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.book2 != null">
+        book2 = #{record.book2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.book3 != null">
+        book3 = #{record.book3,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update interestBook
+    set userId = #{record.userid,jdbcType=VARCHAR},
+      book1 = #{record.book1,jdbcType=VARCHAR},
+      book2 = #{record.book2,jdbcType=VARCHAR},
+      book3 = #{record.book3,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

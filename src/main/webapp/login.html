@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>eLearning</title>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet prefetch'
+	href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch'
+	href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+<link rel='stylesheet prefetch'
+	href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+<link href="http://localhost:8080/eLearning/static/css/login.css"
+	rel="stylesheet"></link>
+</head>
+<body>
+	<div class="container">
+		<div class="info">
+			<h1>eLearning在线智能推荐学习平台</h1>
+			<span>be with you&nbps;<i class="fa fa-heart"></i></span>
+		</div>
+	</div>
+	<div class="form">
+		<div class="thumbnail">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg" />
+		</div>
+		<form class="register-form" action="" id="form66">
+			<input type="text" placeholder="请输入您的邮箱" name="email"  required="required"/>
+			<input type="password" placeholder="输入密码" name="password"  required="required"/>
+			<input type="password" placeholder="确认密码" name="password2"  required="required"/> 
+			<button type="button" onclick="to_page()">注册</button>
+			<p class="message">
+				已经注册 ,<a href="#">立即登录</a>
+			</p>
+		</form>
+		<form class="login-form" action="authenticate/login" id="form33">
+			<input type="text" placeholder="邮箱账户登录" name="email" required="required"/> 
+			<input type="password" placeholder="请输入密码" name="password"  required="required"/>
+			<button type="button" onclick="towhere()">立即登录</button>
+			<p class="message">
+				还没注册? <a href="#">创建新的账号</a>
+			</p>
+		</form>
+	</div>
+	
+	<script
+		src='http://localhost:8080/eLearning/static/js/jquery-3.2.1.min.js'></script>
+	<script src="http://localhost:8080/eLearning/static/js/login.js"></script>
+	<script type="text/javascript">
+	//$(function() {
+		//去首页
+		//to_page(1);
+	//});
+	
+	/**function to_page() {
+		console.log("In to_page function");
+		$.ajax({
+			url : "http://localhost:8080/eLearning/infoCollection/updateClickContent",
+			data : "category=" + 4,
+			type : "GET",
+			success : function(result) {
+				console.log(result.code);
+				 
+			}
+		});
+	}*/
+	function to_page() {
+		console.log("In to_page function");
+		$.ajax({
+			url : "http://localhost:8080/eLearning/authenticate/register",
+			type : "GET",
+			data: $("#form66").serialize(),
+			success : function(result) {
+				console.log(result.code);
+			}
+		});
+	}
+	
+	function towhere(){
+		$.ajax({
+		type: "get",
+		url: "http://localhost:8080/eLearning/authenticate/login",
+		data: $("#form33").serialize(),
+		async: true,
+		success: function(result,status){
+				
+		}
+	});
+	}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>E-Learning在线学习</title>
+		<link rel="Shortcut Icon" href="/imgSource/logo.ico" type="image/x-icon">
+		<link rel="stylesheet" href="http://localhost:8080/eLearning/static/css/index.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css">
+		<script type="text/javascript" src="http://localhost:8080/eLearning/static/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="http://localhost:8080/eLearning/static/js/tools.js"></script>
+		<script type="text/javascript" src="http://localhost:8080/eLearning/static/js/index.js"></script>
+		<style type="text/css">
+			.cat_wrap .cat_title {
+				background: url(/imgSource/head.png) no-repeat;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div>
+
+			<div style="position: relative;">
+				<a href="index.html"><img src="/imgSource/logo.jpg" style="width: 180px;height: 100px;display: inline-block;" /></a> 
+				<img src="/imgSource/slogan.jpg" style="display: inline-block;width: 70%;" />
+				<div style="position: absolute;right: 50px;top: 15px;">
+					<img src="/imgSource/login.png" style="width: 30px;" />
+					<a href="login.html" style="font-size: 16px;color: #DC143C;text-decoration: none;">&nbsp;登录</a><span style="color: #CD0000;">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+					<img src="/imgSource/register.png" style="width: 30px;" />
+					<a href="login.html" style="font-size: 16px;color: #DC143C;text-decoration: none;">&nbsp;注册</a>
+				</div>
+				<div id="search-helper" style="display: none;position: absolute;right: 82px;top: 103px;z-index: 10000;border: 0.5px solid #CD0000;">
+					<p style="color: #CD0000;">&nbsp;&nbsp;------大家都在搜------</p>
+					<p style="color: gray;">&nbsp;人工智能</p>
+					<p style="color: gray;">&nbsp;前端开发</p>
+					<p style="color: gray;">&nbsp;Java开发</p>
+					<p style="color: gray;">&nbsp;大数据</p>
+					<p style="color: gray;">&nbsp;金融管理</p>
+					<p style="color: gray;">&nbsp;投资理财</p>
+					<p style="color: gray;">&nbsp;微信小程序</p>
+					<p style="color: gray;">&nbsp;UI设计</p>
+					<p style="color: gray;">&nbsp;云计算</p><br />
+					<a style="color: #CD0000;">&nbsp;更多热搜>>></a>
+				</div>
+				<div style="position: absolute;right: 30px;top: 70px;">
+					<span style="float: left;"><input type="text" id="txtSearch" placeholder="搜索你感兴趣的内容吧" style="border: 2px solid #CD0000;width: 180px;height: 30px;"/></span>
+					<span style="float: left;">
+						<button type="submit" style="border: 2px solid #CD0000;background-color: #CD0000; height: 34px;width: 50px;">
+							<i class="icon ion-log-in" style="color: white;font-size: 25px;"></i>
+						</button></span>
+				</div>
+			</div>
+
+			<div id="nav">
+				<ul class="w">
+					<li class="active" id="">
+						<a href="index.html">首&nbsp;&nbsp;页</a>
+					</li>
+					<li>
+						<a href="#">&nbsp;&nbsp;知识库</a>
+					</li>
+					<li>
+						<a href="online.html">在线直播</a>
+					</li>
+					<li>
+						<a href="videoStudy.html">视频学习</a>
+					</li>
+					<li>
+						<a href="interactionCenter.html">互动中心</a>
+					</li>
+					<li>
+						<a href="resourceManagement.html">资源管理</a>
+					</li>
+				</ul>
+			</div>
+			<div class="w clearfix" style="position:relative;">
+				<!-- banner上面浮层 -->
+				<div class="cat_wrap">
+					<div class="cat_header">
+						<h3 class="cat_title">全部课程</h3>
+						<div class="cat_list">
+							<div class="float for1">
+								<ul class="clearfix">
+									<li>前端开发</li>
+									<li>项目管理</li>
+								</ul>
+							</div>
+							<div class="float for2">
+								<ul class="clearfix">
+									<li>后端开发</li>
+									<li>数据结构</li>
+								</ul>
+							</div>
+							<div class="float for3">
+								<ul class="clearfix">
+									<li>移动开发</li>
+									<li>敏捷开发</li>
+								</ul>
+							</div>
+							<div class="float for4">
+								<ul class="clearfix">
+									<li>&nbsp;&nbsp;数据库</li>
+									<li>&nbsp;操作系统</li>
+								</ul>
+							</div>
+							<div class="float for5">
+								<ul class="clearfix">
+									<li>&nbsp;&nbsp;云计算</li>
+									<li>&nbsp;大数据</li>
+								</ul>
+							</div>
+							<div class="float for6">
+								<ul class="clearfix">
+									<li>系统运维</li>
+									<li>软件测试</li>
+								</ul>
+							</div>
+							<div class="float for7">
+								<ul class="clearfix">
+									<li>画图工具</li>
+									<li>&nbsp;UI设计</li>
+								</ul>
+							</div>
+							<div class="float for8">
+								<ul class="clearfix">
+									<li>营销管理</li>
+									<li>金融投资</li>
+								</ul>
+							</div>
+							<div class="float for9">
+								<ul class="clearfix">
+									<li>职业素养</li>
+									<li>人力资源</li>
+								</ul>
+							</div>
+							<div class="float for9">
+								<ul class="clearfix">
+									<li>兴趣爱好</li>
+									<li>其他</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- banner浮层滑动显示弹框 -->
+					<div class="cat_subcont">
+						<div class="cat_sublist">
+							<!-- 浮层左边列表 -->
+							<div class="fore1">
+								<div class="fore_list" id="1">
+									<h3><a href="javascript:void(0);">基础</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="css.html">HTML/CSS</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">JavaScript</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">JQuery</a>
+										</li>
+									</ul>
+								</div>
+								<div class="fore_list" id="2">
+									<h3><a href="javascript:void(0);">进阶</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">Html5</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">CSS3</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Node.js</a>
+										</li>
+										<li>
+											<a href="angular.html">AngularJS</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Bootstrap</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">React</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Sass/Less</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Vue.js </a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">WebApp</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="cat_sublist">
+							<!-- 浮层左边列表 -->
+							<div class="fore1">
+								<div class="fore_list" id="3">
+									<h3><a href="javascript:void(0);">全部</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">PHP</a>
+										</li>
+										<li>
+											<a href="java.html">Java</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">SpringBoot</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Python</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">C</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">C++</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Go</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">C#</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Ruby</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="cat_sublist">
+							<!-- 浮层左边列表 -->
+							<div class="fore1">
+								<div class="fore_list" id="4">
+									<h3><a href="javascript:void(0);">全部</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="android.html">Android</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">iOS</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Unity</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">3D</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Cocos2d-x</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="cat_sublist">
+							<!-- 浮层左边列表 -->
+							<div class="fore1">
+								<div class="fore_list" id="5">
+									<h3><a href="javascript:void(0);">全部</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">MySQL</a>
+										</li>
+										<li>
+											<a href="mongoDB.html">MongoDB</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Oracle</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">SQL</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Server</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+
+						</div>
+						<div class="cat_sublist">
+							<!-- 浮层左边列表 -->
+							<div class="fore1">
+								<div class="fore_list">
+									<h3><a href="javascript:void(0);">全部</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">云计算基础架构</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">云平台</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">大数据</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">虚拟化技术</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">云计算基础架构</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="cat_sublist">
+							<!-- 浮层左边列表 -->
+							<div class="fore1">
+								<div class="fore_list">
+									<h3><a href="javascript:void(0);">全部</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">测试</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">Linux</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="cat_sublist">
+							<!-- 浮层左边列表 -->
+							<div class="fore1">
+								<div class="fore_list">
+									<h3><a href="javascript:void(0);">全部</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">动效动画</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">APPUI设计 </a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">设计工具</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">设计基础</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="cat_sublist">
+							<!-- 浮层左边列表 -->
+							<div class="fore1">
+								<div class="fore_list">
+									<h3><a href="javascript:void(0);">营销管理</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">交易营销</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">关系营销</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">价值营销</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">市场营销</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">企业发展</a>
+										</li>
+									</ul>
+								</div>
+								<div class="fore_list">
+									<h3><a href="javascript:void(0);">金融投资</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">直接融资</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">间接融资</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">基金</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">股票</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">债券</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">黄金</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">外汇</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">期货</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">权证</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">理财产品</a>
+										</li>
+								</div>
+							</div>
+
+						</div>
+						<div class="cat_sublist">
+							<!-- 浮层左边列表 -->
+							<div class="fore1">
+								<div class="fore_list">
+									<h3><a href="javascript:void(0);">职业素养</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">职业信念</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">职业知识技能</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">职业行为习惯</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">职业道德</a>
+										</li>
+									</ul>
+								</div>
+								<div class="fore_list">
+									<h3><a href="javascript:void(0);">人力资源</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">体质</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">知识</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">智力</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">技能</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="cat_sublist">
+							<!-- 浮层左边列表 -->
+							<div class="fore1">
+								<div class="fore_list">
+									<h3><a href="javascript:void(0);">兴趣爱好</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">旅游</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">运动</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">音乐</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">电影</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">下棋</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">画画</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">书法</a>
+										</li>
+									</ul>
+								</div>
+								<div class="fore_list">
+									<h3><a href="javascript:void(0);">其他</a></h3>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:void(0);">电子竞技</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">聊天交友</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="outer">
+				<ul id="imgList">
+					<li><img src="/imgSource/carousel01.jpg" class="img" /> </li>
+					<li><img src="/imgSource/carousel02.jpg" class="img" /> </li>
+					<li><img src="/imgSource/carousel03.jpg" class="img" /> </li>
+					<li><img src="/imgSource/carousel04.jpg" class="img" /> </li>
+					<li><img src="/imgSource/carousel05.jpg" class="img" /> </li>
+					<li><img src="/imgSource/carousel01.jpg" class="img" /> </li>
+				</ul>
+				<div id="navDiv">
+					<a href="javascript:;" class="a"></a>
+					<a href="javascript:;" class="a"></a>
+					<a href="javascript:;" class="a"></a>
+					<a href="javascript:;" class="a"></a>
+					<a href="javascript:;" class="a"></a>
+				</div>
+			</div>
+
+			<div style="position: relative;margin-left: 25%;margin-top: 17.5%; width: 960px;height: 135px;border: 1px solid lightgray;border-radius: 5px;box-shadow: 3px 3px 5px red;">
+				<div style="float: left;margin-left: 80px;margin-top: 20px;">
+					<img src="/imgSource/money.png" style="width: 80px;" />
+					<a href="#" style="display: block;color: FireBrick;">投资理财</a>
+				</div>
+				<div style="float: left;margin-left: 90px;margin-top: 20px;">
+					<img src="/imgSource/analyze.png" style="width: 85px;" />
+					<a href="#" style="display: block;color: FireBrick;text-align: center;">数据分析</a>
+				</div>
+				<div style="float: left;margin-left: 90px;margin-top: 20px;">
+					<img src="/imgSource/desig.png" style="width: 80px;" />
+					<a href="#" style="display: block;color: FireBrick;text-align: center;">UI设计</a>
+				</div>
+				<div style="float: left;margin-left: 90px;margin-top: 20px;">
+					<img src="/imgSource/work.png" style="width: 80px;" />
+					<a href="#" style="display: block;color: FireBrick;text-align: center;">办公技能</a>
+				</div>
+				<div style="float: left;margin-left: 90px;margin-top: 20px;">
+					<img src="/imgSource/team.png" style="width: 80px;" />
+					<a href="#" style="display: block;color: FireBrick;text-align: center;">团队合作</a>
+				</div>
+			</div>
+
+			<div style="position: relative;margin-left: 13%;margin-top: 3%;width: 1180px;height: 600px;">
+				<span id="s">
+					<img src="/imgSource/circle.png" style="width: 20px;position: absolute;top: 4px;left: 475px;"/>
+					热/门/搜/索
+					<img src="/imgSource/circle.png" style="width: 20px;position: absolute;top: 4px;right: 480px;"/>
+				</span>
+				<div style="position: absolute;margin-top: 2%;margin-left:6% ;">
+					<div style="width: 550px;float: left;">
+						<a href="#"><img src="/imgSource/new01.png" style="width: 90%;border-radius: 5px;"></a>
+					</div>
+					<div style="width: 550px;float: left;">
+						<a href="#"><img src="/imgSource/new02.png" style="width: 90%;border-radius: 5px;"></a>
+					</div>
+				</div>
+
+				<div style="position: absolute;margin-top: 13%;margin-left:4.5% ;">
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new03.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>对接真实数据 企业级上线项目</a>
+							<p>中级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />9764&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new04.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>MyCAT入门及应用</a>
+							<p>初级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />6252&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new05.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>ES6快速入门</a>
+							<p>初级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />15654&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new06.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>阿里D2前端技术论坛——2018初心</a>
+							<p>中级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />8746&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new07.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>C4D零基础入门</a>
+							<p>入门&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />6346&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+				</div>
+
+				<div style="position: absolute;margin-top: 30%;margin-left:4.5% ;">
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new08.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>基于websocket的火拼俄罗斯</a>
+							<p>中级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />14235&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new09.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>前端性能优化-通用的缓存SDK</a>
+							<p>中级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />25764&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new10.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>Go语言开发微信公众号</a>
+							<p>中级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />24562&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new11.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>游戏测试入门</a>
+							<p>入门&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />1852&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new12.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>Python制作数据分析工具</a>
+							<p>中级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />16834&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+				</div>
+				<div style="position: absolute;bottom: 2%;right: 4%;">
+					<a href="#" style="color: #DC143C;">查看更多>></a>
+				</div>
+			</div>
+			<hr style="border-top: none;box-shadow: 0px 1px 3px gray;" />
+
+			<div style="position: relative;margin-left: 13%;margin-top: 3%;width: 1180px;height: 500px;">
+				<span id="s">
+					<img src="/imgSource/triangle.png" style="width: 35px;position: absolute;top: 1px;left: 475px;"/>
+					最/新/干/货
+					<img src="/imgSource/triangle.png" style="width: 35px;position: absolute;top: 1px;right: 480px;"/>
+				</span>
+
+				<div style="position: absolute;margin-top: 3%;margin-left:4.5% ;">
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new13.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>电商banner设计制作</a>
+							<p>入门&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />356&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new14.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>MAYA-Polygon多边形建模</a>
+							<p>入门&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />564&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new15.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>Python实现线性回归</a>
+							<p>初级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />2375&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new16.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>MAYA-2017初识与基础操作</a>
+							<p>入门&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />1425&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new17.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>Ruff物联网应用开发入门</a>
+							<p>初级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />1765&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+				</div>
+
+				<div style="position: absolute;margin-top: 20%;margin-left:4.5% ;">
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new18.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>iOS开发之网络协议</a>
+							<p>初级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />987&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new19.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>GO语言语法入门篇</a>
+							<p>入门&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />5789&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new20.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>C4D创意M字母教程</a>
+							<p>初级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />1379&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new21.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>AWS的入门与使用</a>
+							<p>初级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />2947&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+					<div style="width: 220px;float: left;">
+						<a href="#"><img src="/imgSource/new22.jpg" style="width: 90%;border-radius: 5px;"></a>
+						<div id="intro" style="width: 190px;">
+							<a>移动端音频视频入门</a>
+							<p>初级&nbsp;&nbsp;&nbsp;<img src="/imgSource/people.png" />4769&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /><img src="/imgSource/star.png" /></p>
+						</div>
+					</div>
+				</div>
+				<div style="position: absolute;bottom: 7%;right: 4%;">
+					<a href="#" style="color: #DC143C;">查看更多>></a>
+				</div>
+			</div>
+			<hr style="border-top: none;box-shadow: 0px 1px 3px gray;" />
+
+			
+			<div style="position: relative;height: 100px;width: auto;background-color: whitesmoke;">
+				<p style="position: absolute;left: 15%;top: 40%; color: gray;float: left;">
+					<span>企业合作</span>
+					<span style="margin-left: 20px;">人才招聘</span>
+					<span style="margin-left: 20px;">联系我们</span>
+					<span style="margin-left: 20px;">常见问题</span>
+					<span style="margin-left: 20px;">意见反馈</span>
+					<span style="margin-left: 20px;">友情链接</span>
+					<span style="margin-left: 20px;">给个好评</span>
+				</p>
+				<div style="position: absolute;right: 15%;top: 20%;float: left;">
+					<img src="/imgSource/wx.png" style="width: 40px;margin-right: 30px;" />
+					<img src="/imgSource/wb.png" style="width: 40px;" />
+				</div>
+				<div style="position: absolute;right: 15%;top: 58%;float: left;">
+					<span style="font-size: 10px;color: gray;margin-right: 25px;">官方公众号</span>
+					<span style="font-size: 10px;color: gray;">官方微博</span>
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>

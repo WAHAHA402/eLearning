@@ -1,0 +1,46 @@
+#tab div:hover{
+	background-color: #DC143C;
+	cursor: pointer;
+}
+a:hover{
+	color: #DC143C;
+	cursor: pointer;
+}
+
+.active{
+	background-color: #DC143C;
+}
+
+ul.pagination {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	left: 40%;
+	top: 95%;
+	font-size: 20px;
+}
+
+ul.pagination li {
+	display: inline;
+}
+
+ul.pagination li a {
+	color: #DC143C;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+ul.pagination li a.active {
+	background-color: #FF3030;
+	color: white;
+	border-radius: 5px;
+}
+
+ul.pagination li a:hover:not(.active) {
+	background-color: #CD0000;
+	color: white;
+}
+

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wahaha.dao.SearchContentMapper">
+  <resultMap id="BaseResultMap" type="com.wahaha.bean.SearchContent">
+    <id column="userId" jdbcType="VARCHAR" property="userid" />
+    <result column="frontEndFoundation" jdbcType="INTEGER" property="frontendfoundation" />
+    <result column="frontEndAdvance" jdbcType="INTEGER" property="frontendadvance" />
+    <result column="backEnd" jdbcType="INTEGER" property="backend" />
+    <result column="mobileDevelop" jdbcType="INTEGER" property="mobiledevelop" />
+    <result column="database666" jdbcType="INTEGER" property="database666" />
+    <result column="recentTechItem" jdbcType="INTEGER" property="recenttechitem" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    userId, frontEndFoundation, frontEndAdvance, backEnd, mobileDevelop, database666, 
+    recentTechItem
+  </sql>
+  <select id="selectByExample" parameterType="com.wahaha.bean.SearchContentExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from searchContent
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from searchContent
+    where userId = #{userid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from searchContent
+    where userId = #{userid,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.wahaha.bean.SearchContentExample">
+    delete from searchContent
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.wahaha.bean.SearchContent">
+    insert into searchContent (userId, frontEndFoundation, frontEndAdvance, 
+      backEnd, mobileDevelop, database666, 
+      recentTechItem)
+    values (#{userid,jdbcType=VARCHAR}, #{frontendfoundation,jdbcType=INTEGER}, #{frontendadvance,jdbcType=INTEGER}, 
+      #{backend,jdbcType=INTEGER}, #{mobiledevelop,jdbcType=INTEGER}, #{database666,jdbcType=INTEGER}, 
+      #{recenttechitem,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wahaha.bean.SearchContent">
+    insert into searchContent
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="frontendfoundation != null">
+        frontEndFoundation,
+      </if>
+      <if test="frontendadvance != null">
+        frontEndAdvance,
+      </if>
+      <if test="backend != null">
+        backEnd,
+      </if>
+      <if test="mobiledevelop != null">
+        mobileDevelop,
+      </if>
+      <if test="database666 != null">
+        database666,
+      </if>
+      <if test="recenttechitem != null">
+        recentTechItem,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="frontendfoundation != null">
+        #{frontendfoundation,jdbcType=INTEGER},
+      </if>
+      <if test="frontendadvance != null">
+        #{frontendadvance,jdbcType=INTEGER},
+      </if>
+      <if test="backend != null">
+        #{backend,jdbcType=INTEGER},
+      </if>
+      <if test="mobiledevelop != null">
+        #{mobiledevelop,jdbcType=INTEGER},
+      </if>
+      <if test="database666 != null">
+        #{database666,jdbcType=INTEGER},
+      </if>
+      <if test="recenttechitem != null">
+        #{recenttechitem,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.wahaha.bean.SearchContentExample" resultType="java.lang.Long">
+    select count(*) from searchContent
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update searchContent
+    <set>
+      <if test="record.userid != null">
+        userId = #{record.userid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.frontendfoundation != null">
+        frontEndFoundation = #{record.frontendfoundation,jdbcType=INTEGER},
+      </if>
+      <if test="record.frontendadvance != null">
+        frontEndAdvance = #{record.frontendadvance,jdbcType=INTEGER},
+      </if>
+      <if test="record.backend != null">
+        backEnd = #{record.backend,jdbcType=INTEGER},
+      </if>
+      <if test="record.mobiledevelop != null">
+        mobileDevelop = #{record.mobiledevelop,jdbcType=INTEGER},
+      </if>
+      <if test="record.database666 != null">
+        database666 = #{record.database666,jdbcType=INTEGER},
+      </if>
+      <if test="record.recenttechitem != null">
+        recentTechItem = #{record.recenttechitem,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update searchContent
+    set userId = #{record.userid,jdbcType=VARCHAR},
+      frontEndFoundation = #{record.frontendfoundation,jdbcType=INTEGER},
+      frontEndAdvance = #{record.frontendadvance,jdbcType=INTEGER},
+      backEnd = #{record.backend,jdbcType=INTEGER},
+      mobileDevelop = #{record.mobiledevelop,jdbcType=INTEGER},
+      database666 = #{record.database666,jdbcType=INTEGER},
+      recentTechItem = #{record.recenttechitem,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wahaha.bean.SearchContent">
+    update searchContent
+    <set>
+      <if test="frontendfoundation != null">
+        frontEndFoundation = #{frontendfoundation,jdbcType=INTEGER},
+      </if>
+      <if test="frontendadvance != null">
+        frontEndAdvance = #{frontendadvance,jdbcType=INTEGER},
+      </if>
+      <if test="backend != null">
+        backEnd = #{backend,jdbcType=INTEGER},
+      </if>
+      <if test="mobiledevelop != null">
+        mobileDevelop = #{mobiledevelop,jdbcType=INTEGER},
+      </if>
+      <if test="database666 != null">
+        database666 = #{database666,jdbcType=INTEGER},
+      </if>
+      <if test="recenttechitem != null">
+        recentTechItem = #{recenttechitem,jdbcType=INTEGER},
+      </if>
+    </set>
+    where userId = #{userid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wahaha.bean.SearchContent">
+    update searchContent
+    set frontEndFoundation = #{frontendfoundation,jdbcType=INTEGER},
+      frontEndAdvance = #{frontendadvance,jdbcType=INTEGER},
+      backEnd = #{backend,jdbcType=INTEGER},
+      mobileDevelop = #{mobiledevelop,jdbcType=INTEGER},
+      database666 = #{database666,jdbcType=INTEGER},
+      recentTechItem = #{recenttechitem,jdbcType=INTEGER}
+    where userId = #{userid,jdbcType=VARCHAR}
+  </update>
+</mapper>
